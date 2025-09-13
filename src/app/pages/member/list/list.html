@@ -1,0 +1,41 @@
+<div class="games-container" *ngIf="currentUser">
+  <h1 class="games-title">เกมแนะนำ, สวัสดีคุณ {{ currentUser.fullname }}</h1>
+
+  <div class="games-grid">
+    <mat-card class="game-card" *ngFor="let game of allGames" (click)="selectGame(game)">
+      <img [src]="game.image" alt="{{game.name}}" class="game-img">
+      <div class="game-info">
+        <h2>{{ game.name }}</h2>
+      </div>
+    </mat-card>
+  </div>
+
+  <!-- Game Detail Form -->
+  <div class="game-detail" *ngIf="selectedGame">
+    <mat-card class="detail-card">
+      <h2 class="detail-title">{{ selectedGame.name }}</h2>
+      <img [src]="selectedGame.image" alt="{{selectedGame.name}}" class="detail-image">
+      <p>{{ selectedGame.details }}</p>
+
+      <form (ngSubmit)="topUp(userIdInput.value, amountInput.value)" class="topup-form">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>ID ผู้ใช้</mat-label>
+          <input matInput type="text" #userIdInput required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>จำนวนเงิน</mat-label>
+          <input matInput type="number" #amountInput required>
+        </mat-form-field>
+
+        <div class="form-actions">
+  <button mat-raised-button color="primary" type="button" (click)="topUp(userIdInput.value, amountInput.value)" class="btn-topup">
+    เติมเงินด่วน
+  </button>
+  <button mat-stroked-button type="button" (click)="selectedGame=null" class="btn-close">ปิด</button>
+</div>
+
+      </form>
+    </mat-card>
+  </div>
+</div>

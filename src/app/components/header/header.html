@@ -1,0 +1,22 @@
+<mat-toolbar class="app-header" *ngIf="router.url === '/' || router.url === '/login'">
+  <div class="header-left">
+    <img src="/assets/images/garena.png" alt="Logo" class="logo">
+    <h1 class="site-title">ศูนย์เติมเงินอย่างเป็นทางการ</h1>
+  </div>
+  <div class="header-right">
+    <button mat-button class="header-btn" [routerLink]="['/login']">เข้าสู่ระบบ</button>
+    <button mat-button class="header-btn" [routerLink]="['/register']">สมัครสมาชิก</button>
+  </div>
+</mat-toolbar>
+
+<mat-toolbar class="app-header" *ngIf="router.url !== '/' && router.url !== '/login'">
+  <div class="header-left">
+    <img src="/assets/images/garena.png" alt="Logo" class="logo">
+    <h1 class="site-title">ศูนย์เติมเงินอย่างเป็นทางการ</h1>
+  </div>
+  <div class="header-right">
+    <button mat-button class="header-btn" [routerLink]="['/member/list']">รายการเกม</button>
+    <button mat-button class="header-btn" [routerLink]="['/member/profile']">โปรไฟล์</button>
+    <button mat-button class="header-btn" (click)="logout()">ออกจากระบบ</button>
+  </div>
+</mat-toolbar>

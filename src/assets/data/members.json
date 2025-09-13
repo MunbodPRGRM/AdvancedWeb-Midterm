@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "email": "user1@example.com",
+    "password": "password123",
+    "fullname": "สมชาย ใจดี",
+    "image": "/assets/images/user1.png",
+    "role": "member"
+  },
+  {
+    "id": 2,
+    "email": "user2@example.com",
+    "password": "mypassword",
+    "fullname": "สมหญิง แสนสุข",
+    "image": "/assets/images/user2.png",
+    "role": "admin"
+  },
+  {
+    "id": 3,
+    "email": "user3@example.com",
+    "password": "12345678",
+    "fullname": "สมปอง มีสุข",
+    "image": "/assets/images/user3.png",
+    "role": "member"
+  }
+]

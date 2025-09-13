@@ -1,0 +1,42 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* ✅ เงา */
+  position: sticky;  /* ให้ header ติดบน */
+  top: 0;
+  z-index: 1000; /* กัน header จมกับ content */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 15px;
+}
+
+.site-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  gap: 10px;
+}
+
+.header-btn {
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.header-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px); /* ขยับขึ้นเล็กน้อยเวลา hover */
+}

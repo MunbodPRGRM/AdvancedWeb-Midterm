@@ -1,0 +1,12 @@
+<div class="profile-wrapper" *ngIf="currentUser">
+  <mat-card class="profile-card">
+    <h1>ข้อมูลส่วนตัว</h1>
+
+    <mat-card-content>
+      <p><strong>ชื่อผู้ใช้:</strong> {{ currentUser.fullname }}</p>
+      <p><strong>อีเมล์:</strong> {{ currentUser.email }}</p>
+      <p><strong>บทบาท:</strong> {{ currentUser.role }}</p>
+    </mat-card-content>
+
+  </mat-card>
+</div>

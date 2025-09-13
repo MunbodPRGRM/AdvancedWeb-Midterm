@@ -1,0 +1,11 @@
+<div class="games-container">
+  <h1>เกมแนะนำ</h1>
+  <div class="games-grid">
+    <mat-card class="game-card" *ngFor="let game of allGames">
+      <img [src]="game.image" alt="{{game.name}}">
+      <div class="game-info">
+        <h2>{{ game.name }}</h2>
+      </div>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+.games-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* จัดทุกอย่างตรงกลางแนวนอน */
+  text-align: center;
+}
+
+.games-container h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.games-grid {
+  display: flex;
+  flex-wrap: wrap;       /* ให้การ์ดขึ้นบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
+  justify-content: center; /* จัดการ์ดให้อยู่ตรงกลาง */
+  gap: 20px;             /* ระยะห่างระหว่างการ์ด */
+  width: 100%;
+}
+
+.game-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  background: #fff;
+  width: 220px;          /* กำหนดความกว้างการ์ด */
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.game-info {
+  padding: 12px;
+}
+
+.game-info h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #444;
+}
+
+.game-info p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0 0 0;
+}
